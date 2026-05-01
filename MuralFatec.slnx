@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="MuralFatecBll/MuralFatecBll.csproj" Id="38b631d0-b860-44a2-8af4-9aadc56a6cda" />
+  <Project Path="MuralFatecDal/MuralFatecDal.csproj" Id="89d7fc1a-9b6b-46ce-9f9f-cbb49f0181f1" />
+  <Project Path="MuralFatecDomain/MuralFatecDomain.csproj" Id="bad3e2a1-fe83-44de-bb83-ced258baba20" />
+</Solution>
