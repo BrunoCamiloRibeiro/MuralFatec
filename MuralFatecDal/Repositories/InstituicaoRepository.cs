@@ -7,11 +7,11 @@ using System.Text;
 
 namespace MuralFatecDal.Repositories
 {
-    public class InstituicacaoRepository : IInstituicaoRepository
+    public class InstituicaoRepository : IInstituicaoRepository
     {
         private readonly SqlServerData _bancoDados;
 
-        public InstituicacaoRepository(SqlServerData bancoDados)
+        public InstituicaoRepository(SqlServerData bancoDados)
         {
             _bancoDados = bancoDados;
         }
@@ -40,19 +40,17 @@ namespace MuralFatecDal.Repositories
 
         public void Excluir(int id)
         {
-            throw new NotImplementedException();
+            var institucao = _bancoDados.Instituicoes.FirstOrDefault(x => x.Id == id);
+            _bancoDados.Instituicoes.Remove(institucao);
+            _bancoDados.SaveChanges();
         }
 
 
 
         public InstituicaoEntity Obter(int id)
         {
-            throw new NotImplementedException();
-        }
-
-        public bool Salvar()
-        {
-            throw new NotImplementedException();
+            var instituicao = _bancoDados.Instituicoes.FirstOrDefault(x => x.Id == id);
+            return instituicao;
         }
     }
 }
